@@ -1,0 +1,30 @@
+#%CTI Type v1.0
+cti: cti.c.cp.chain_schema.v1.0
+final: false
+access: public
+display_name: ChainSchema
+description: ChainSchema
+schema:
+  $schema: http://json-schema.org/draft-07/schema#
+  $ref: "#/definitions/ChainSchema"
+  definitions:
+    ChainSchema:
+      properties:
+        vm:
+          type: string
+          description: Virtual Machine type.
+        name:
+          type: string
+      required: [ name ]
+traits_schema:
+  $schema: http://json-schema.org/draft-07/schema#
+  $ref: "#/definitions/cti-traits"
+  definitions:
+    cti-traits:
+      type: object
+      properties:
+        vm:
+          type: string
+          description: Virtual Machine type.
+          enum: [ evm, svm, tvm ]
+      required: [ vm ]

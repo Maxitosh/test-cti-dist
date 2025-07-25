@@ -1,0 +1,8 @@
+{
+  "package_id": "c.cp",
+  "ramlx_version": "",
+  "entities": [
+    "entities/chain_schema.yaml",
+    "entities/evm_schema.yaml"
+  ]
+}
